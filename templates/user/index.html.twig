@@ -10,6 +10,7 @@
             <tr>
                 <th>Id</th>
                 <th>Email</th>
+                <th>Username</th>
                 <th>Roles</th>
                 <th>IsVerified</th>
                 <th>actions</th>
@@ -20,6 +21,7 @@
             <tr>
                 <td>{{ user.id }}</td>
                 <td>{{ user.email }}</td>
+                <td>{{ user.username }}</td>
                 <td>{{ user.roles ? user.roles|json_encode : '' }}</td>
                 <td>{{ user.isVerified ? 'Yes' : 'No' }}</td>
                 <td>
@@ -29,7 +31,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="7">no records found</td>
             </tr>
         {% endfor %}
         </tbody>
