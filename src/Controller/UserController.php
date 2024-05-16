@@ -58,6 +58,13 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $roles = [];
+            foreach($form->get('roles')->getData() as $role) {
+                $roles[] = $role;
+            }
+            $user->setRoles($roles);
+
+            $entityManager->persist($user);
             $entityManager->flush();
 
             return $this->redirectToRoute('app_user_index', [], Response::HTTP_SEE_OTHER);
