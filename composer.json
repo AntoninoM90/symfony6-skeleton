@@ -1,6 +1,23 @@
 {
-    "type": "project",
-    "license": "proprietary",
+    "name": "antoninom90/symfony6-skeleton",
+    "description": "The Symfony PHP Web framework v.6.4 LTS skeleton ",
+    "keywords": [
+        "symfony",
+        "framework",
+        "doctrine",
+        "application",
+        "webframework",
+        "stable"
+    ],
+    "homepage": "http://github.com/AntoninoM90/symfony6-skeleton",
+    "type": "template",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Antonino M. (@AntoninoM90)",
+            "homepage": "https://antoninom90.altervista.org/"
+        }
+    ],
     "minimum-stability": "stable",
     "prefer-stable": true,
     "require": {
