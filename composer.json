@@ -50,7 +50,7 @@
         "symfony/property-access": "6.4.*",
         "symfony/property-info": "6.4.*",
         "symfony/runtime": "7.1.*",
-        "symfony/security-bundle": "6.4.*",
+        "symfony/security-bundle": "7.1.*",
         "symfony/serializer": "6.4.*",
         "symfony/stimulus-bundle": "^2.17",
         "symfony/string": "6.4.*",
