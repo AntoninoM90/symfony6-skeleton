@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "abeea1a665290551dc5816bb28b28223",
+    "content-hash": "1f1828a3a6594eda27caf222ea66ffec",
     "packages": [
         {
             "name": "amphp/amp",
@@ -7455,16 +7455,16 @@
         },
         {
             "name": "symfony/security-http",
-            "version": "v7.1.0",
+            "version": "v7.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/security-http.git",
-                "reference": "e8637cdef1b58a27878694e1b79ef8bf1b924b4c"
+                "reference": "d551ee81377b2b12abe04135564f2e4e6945f90f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/security-http/zipball/e8637cdef1b58a27878694e1b79ef8bf1b924b4c",
-                "reference": "e8637cdef1b58a27878694e1b79ef8bf1b924b4c",
+                "url": "https://api.github.com/repos/symfony/security-http/zipball/d551ee81377b2b12abe04135564f2e4e6945f90f",
+                "reference": "d551ee81377b2b12abe04135564f2e4e6945f90f",
                 "shasum": ""
             },
             "require": {
@@ -7495,7 +7495,7 @@
                 "symfony/routing": "^6.4|^7.0",
                 "symfony/security-csrf": "^6.4|^7.0",
                 "symfony/translation": "^6.4|^7.0",
-                "web-token/jwt-library": "^3.3.2"
+                "web-token/jwt-library": "^3.3.2|^4.0"
             },
             "type": "library",
             "autoload": {
@@ -7523,7 +7523,7 @@
             "description": "Symfony Security Component - HTTP Integration",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/security-http/tree/v7.1.0"
+                "source": "https://github.com/symfony/security-http/tree/v7.1.7"
             },
             "funding": [
                 {
@@ -7539,7 +7539,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-17T10:55:18+00:00"
+            "time": "2024-11-05T15:34:55+00:00"
         },
         {
             "name": "symfony/serializer",
