@@ -107,8 +107,7 @@
         ]
     },
     "conflict": {
-        "symfony/symfony": "*",
-        "php": ">=8.1 <8.1.10"
+        "symfony/symfony": "*"
     },
     "extra": {
         "symfony": {
