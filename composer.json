@@ -51,7 +51,7 @@
         "symfony/property-info": "6.4.*",
         "symfony/runtime": "6.4.*",
         "symfony/security-bundle": "6.4.*",
-        "symfony/security-http": "6.4.*",
+        "symfony/security-http": "7.1.*",
         "symfony/serializer": "6.4.*",
         "symfony/stimulus-bundle": "^2.17",
         "symfony/string": "6.4.*",
