@@ -26,7 +26,7 @@
         "ext-iconv": "*",
         "amphp/http-client": "5.1.*",
         "doctrine/dbal": "^4",
-        "doctrine/doctrine-bundle": "^2.11",
+        "doctrine/doctrine-bundle": "^3.3",
         "doctrine/doctrine-migrations-bundle": "^3.3",
         "doctrine/orm": "^3.3",
         "phpdocumentor/reflection-docblock": "^5.4",
