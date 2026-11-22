@@ -35,6 +35,9 @@
             "./migrations/.gitignore"
         ]
     },
+    "phpstan/phpstan": {
+        "version": "2.3.7"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
@@ -48,6 +51,9 @@
             "./phpunit.xml.dist",
             "./tests/bootstrap.php"
         ]
+    },
+    "squizlabs/php_codesniffer": {
+        "version": "4.0.4"
     },
     "symfony/apache-pack": {
         "version": "1.0",
