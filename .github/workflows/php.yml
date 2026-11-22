@@ -11,11 +11,27 @@ permissions:
 
 jobs:
   build:
-
+    name: Tests PHP ${{ matrix.php }}
     runs-on: ubuntu-latest
+    continue-on-error: ${{ matrix.experimental }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ 8.4, 8.5]
+        experimental: [false]
+        include:
+          - php: 8.5
+            analysis: true
 
     steps:
     - uses: actions/checkout@v4
+
+    - name: Set up PHP ${{ matrix.php }}
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php }}
+        coverage: xdebug
 
     - name: Validate composer.json and composer.lock
       run: composer validate --strict
@@ -29,11 +45,46 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-php-
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+    - name: Install dependencies with Composer
+      uses: ramsey/composer-install@v2
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
 
     # - name: Run test suite
     #   run: composer run-script test
+
+    - name: Coding standards
+      if: matrix.analysis
+      run: vendor/bin/phpcs
+
+    - name: Static analysis
+      if: matrix.analysis
+      run: vendor/bin/phpstan
+
+    # - name: Doctrine database (migrations)
+      # run:  |
+        # php ./bin/console doctrine:migrations:migrate --no-interaction
+        # php ./bin/console doctrine:schema:validate --skip-sync
+
+    - name: Tests
+      if: ${{ ! matrix.analysis }}
+      run: vendor/bin/phpunit
+
+    - name: Tests with coverage
+      if: matrix.analysis
+      #run: vendor/bin/phpunit --coverage-clover clover.xml
+      run: vendor/bin/phpunit --coverage-text --coverage-clover clover.xml
+
+    - name: Upload coverage to Codecov
+      if: matrix.analysis
+      uses: codecov/codecov-action@v5
+      with:
+        files: clover.xml
+        # Public repositories can rely on the Codecov GitHub App.
+        # If the repository is not connected yet, add a
+        # CODECOV_TOKEN secret (see https://about.codecov.io/) and
+        # uncomment the line below.
+        # token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: false
+        verbose: false
