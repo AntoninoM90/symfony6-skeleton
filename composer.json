@@ -24,7 +24,7 @@
         "php": ">=8.4",
         "ext-ctype": "*",
         "ext-iconv": "*",
-        "amphp/http-client": "5.1.*",
+        "amphp/http-client": "5.3.*",
         "doctrine/dbal": "^4",
         "doctrine/doctrine-bundle": "^3.3",
         "doctrine/doctrine-migrations-bundle": "^3.3",
